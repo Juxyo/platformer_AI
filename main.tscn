@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpqofnvstnwhv"]
+[gd_scene load_steps=8 format=3 uid="uid://bpqofnvstnwhv"]
 
 [ext_resource type="Texture2D" uid="uid://btumvmdn06uya" path="res://Green.png" id="1_3oxou"]
 [ext_resource type="Texture2D" uid="uid://dlfh43tu5fy50" path="res://Terrain (16x16).png" id="2_jkxle"]
 [ext_resource type="PackedScene" uid="uid://cmhpkpm701x65" path="res://Scenes/main_character.tscn" id="3_wd54f"]
+[ext_resource type="PackedScene" uid="uid://h1judbythdte" path="res://Scenes/apple.tscn" id="4_i22px"]
+[ext_resource type="Script" path="res://game_manager.gd" id="5_qx8rm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_puel6"]
 texture = ExtResource("2_jkxle")
@@ -613,3 +615,16 @@ position = Vector2(-6, 7)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(422, 368)
+
+[node name="Area2D" parent="." instance=ExtResource("4_i22px")]
+position = Vector2(528, 502)
+
+[node name="Area2D2" parent="." instance=ExtResource("4_i22px")]
+position = Vector2(624, 510)
+
+[node name="Area2D3" parent="." instance=ExtResource("4_i22px")]
+position = Vector2(721, 508)
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_qx8rm")
