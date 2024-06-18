@@ -2,7 +2,9 @@
 .godot/
 
 #ignore godot_rl_agents/
+.agents/
 godot_rl_agents
+rl
 
 # Godot-specific ignores
 .import/
