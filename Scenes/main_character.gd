@@ -34,7 +34,9 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, 100)
-
+		
+	#velocity.x = ai_controller_2d.move.x
+	#velocity.y = ai_controller_2d.move.y
 	move_and_slide()
 
 	var isLeft = velocity.x < 0

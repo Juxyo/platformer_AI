@@ -10,3 +10,5 @@ func _on_body_entered(body):
 		get_tree().change_scene_to_packed(target_level)
 		ai_controller_2d.reward += 1.0
 
+func _on_target_body_entered(_body: Node2D) -> void:
+	ai_controller_2d.reward += 1.0
