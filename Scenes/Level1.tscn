@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://bpqofnvstnwhv"]
+[gd_scene load_steps=12 format=3 uid="uid://bpqofnvstnwhv"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_pupef"]
 [ext_resource type="Texture2D" uid="uid://btumvmdn06uya" path="res://Green.png" id="2_2dq12"]
 [ext_resource type="Texture2D" uid="uid://dlfh43tu5fy50" path="res://Terrain (16x16).png" id="3_xbt8h"]
 [ext_resource type="PackedScene" uid="uid://cmhpkpm701x65" path="res://Scenes/main_character.tscn" id="4_1at22"]
+[ext_resource type="Script" path="res://Scenes/AIController2D.gd" id="5_p6a5g"]
 [ext_resource type="PackedScene" uid="uid://h1judbythdte" path="res://Scenes/apple.tscn" id="5_y7h7x"]
 [ext_resource type="PackedScene" uid="uid://bp0sh5lippola" path="res://Scenes/end.tscn" id="6_6iylt"]
 [ext_resource type="PackedScene" uid="uid://dt4na72r6srhj" path="res://Scenes/Level2.tscn" id="7_eh1j6"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="9_x7t4x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_puel6"]
 texture = ExtResource("3_xbt8h")
@@ -624,6 +626,10 @@ position = Vector2(-6, 7)
 [node name="Camera2D" type="Camera2D" parent="GameScenes/CharacterBody2D"]
 position = Vector2(422, 368)
 
+[node name="AIController2D" type="Node2D" parent="GameScenes/CharacterBody2D"]
+position = Vector2(6, -7)
+script = ExtResource("5_p6a5g")
+
 [node name="Collectibles" type="Node" parent="GameScenes"]
 
 [node name="Area2D" parent="GameScenes/Collectibles" instance=ExtResource("5_y7h7x")]
@@ -659,3 +665,6 @@ grow_vertical = 2
 text = "Points : 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("9_x7t4x")

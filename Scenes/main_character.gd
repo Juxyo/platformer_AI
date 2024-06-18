@@ -8,6 +8,8 @@ const JUMP_VELOCITY = -750.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@onready var ai_controller_2d = $AIController2D
+
 
 func _physics_process(delta):
 	
@@ -37,3 +39,5 @@ func _physics_process(delta):
 
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
+	
+	
