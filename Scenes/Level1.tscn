@@ -636,13 +636,13 @@ script = ExtResource("5_p6a5g")
 position = Vector2(528, 502)
 
 [node name="Area2D2" parent="GameScenes/Collectibles" instance=ExtResource("5_y7h7x")]
-position = Vector2(624, 510)
+position = Vector2(637, 500)
 
 [node name="Area2D3" parent="GameScenes/Collectibles" instance=ExtResource("5_y7h7x")]
-position = Vector2(721, 508)
+position = Vector2(958, 505)
 
 [node name="Finish" parent="GameScenes/Collectibles" instance=ExtResource("6_6iylt")]
-position = Vector2(4830, 536)
+position = Vector2(4800, 540)
 target_level = ExtResource("7_eh1j6")
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -668,3 +668,18 @@ vertical_alignment = 1
 
 [node name="Sync" type="Node" parent="."]
 script = ExtResource("9_x7t4x")
+
+[node name="Area2D" parent="." instance=ExtResource("5_y7h7x")]
+position = Vector2(1939, 490)
+
+[node name="Area2D2" parent="." instance=ExtResource("5_y7h7x")]
+position = Vector2(2135, 331)
+
+[node name="Area2D3" parent="." instance=ExtResource("5_y7h7x")]
+position = Vector2(2616, 332)
+
+[node name="Area2D4" parent="." instance=ExtResource("5_y7h7x")]
+position = Vector2(2003, 389)
+
+[node name="Area2D5" parent="." instance=ExtResource("5_y7h7x")]
+position = Vector2(3239, 292)

@@ -5,6 +5,7 @@ var move = Vector2.ZERO
 @onready var character_body_2d = $".."
 @onready var finish = $"../../Collectibles/Finish"
 
+
 func get_obs() -> Dictionary:
 	var obs:= [
 		character_body_2d.position.x,
